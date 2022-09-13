@@ -1,6 +1,6 @@
-#include <main.h>
+#include "main.h"
 /**
- * print_last_digit - prints the last difit
+ * print_last_digit - prints the last digit
  * @n: the variable to be used
  * Return: the variable
  */
