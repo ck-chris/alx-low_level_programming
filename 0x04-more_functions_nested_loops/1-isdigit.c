@@ -1,4 +1,4 @@
-#include "main,h"
+#include "main.h"
 /**
  * _isdigit - checks for digits frm 0 to 9
  * @c: the variable to test
