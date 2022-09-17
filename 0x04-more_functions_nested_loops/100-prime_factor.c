@@ -5,13 +5,16 @@
  */
 int main(void)
 {
-	long int number, i;
+	unsigned long  num, divisor;
 
-	number = 612852475143;
-	for (i = 2; i < number; i++)
+	num = 612852475143;
+	for (divisor = 2; divisor < number; divisor++)
 	{
-		number = number / i;
+		if (num % divisor == 0)
+		{
+			num = num / divisor;
+		}
 	}
-	printf("%ld\n", i);
+	printf("%ld\n", divisor);
 	return (0);
 }
