@@ -4,7 +4,7 @@
  * @c: The character to print
  * Return: 1 on success, -1 on error and errno is set appopriatary
  */
-int _puthar()
+int _puthar(char c)
 {
 	return (write(1, &c, 1));
 }
