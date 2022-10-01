@@ -12,7 +12,7 @@ bool test(char *array)
 
 	for (j = 0; array[j]; j++)
 	{
-		if (!(array[j] >= '0') && array[j] >= '9')
+		if (!(array[j] >= '0' && array[j] <= '9'))
 			return (0);
 	}
 	return (1);
