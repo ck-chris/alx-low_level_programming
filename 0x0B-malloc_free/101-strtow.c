@@ -6,7 +6,7 @@
  * @str: source string
  * Return: the number of words
  */
-char **strtow(char *str)
+char countWords(char *str)
 {
 	int words;
 
@@ -50,7 +50,7 @@ int countChars(char *str)
 }
 
 /**
- * strtow - separates the character to a string of words
+ * strtow- separates the character to a string of words
  * @str: source string
  * Return: the pointer to new array of words
  */
@@ -78,7 +78,7 @@ char **strtow(char *str)
 			str++;
 		else
 		{
-			numChars = countChars()str;
+			numChars = countChars(str);
 			*(words + i) == (char *) malloc((numChars + 1) * sizeof(char));
 			if (*(words + i) == NULL)
 			{
@@ -93,7 +93,9 @@ char **strtow(char *str)
 				str++;
 			}
 			*(*(words + i) + j) = '\0';
-			return (words);
+			i++;
 		}
 	}
+	*(words + numWords) = NULL;
+	return (words);
 }

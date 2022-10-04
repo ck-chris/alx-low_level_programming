@@ -1,8 +1,9 @@
-#include <stdio.h>
-#include "main.h"  
+#include <stdlib.h>
+#include "main.h"
+
 /**
  * argstostr - concatenates all the arguments of your program
- * @c: integer arggument
+ * @ac: integer arggument
  * @av: pointer to a pointer that holds a character or a string
  * Return: astring or NULL in failure
  */
@@ -18,7 +19,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
-		for (j =0; *(*(av + i) + j); j++)
+		for (j = 0; *(*(av + i) + j); j++)
 			length++;
 
 	conc = malloc((length + ac + 1) * sizeof(char));
@@ -27,11 +28,13 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; *(*(av + i) != '\0') + j)
+		for (j = 0; *(*(av + i) + j) != '\0'; j++)
 		{
 			*(conc + idx) = *(*(av + i) + j);
 			idx++;
 		}
+		*(conc + idx) = '\n';
+		idx++;
 	}
 	*(conc + idx) = '\0';
 	return (conc);
